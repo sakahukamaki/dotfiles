@@ -4,8 +4,6 @@
 
 ########################################
 export PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 # 環境変数
 export LANG=ja_JP.UTF-8
@@ -135,6 +133,7 @@ alias mkdir='mkdir -p'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
+alias vi="vim"
 
 # グローバルエイリアス
 alias -g L='| less'
@@ -170,11 +169,6 @@ case ${OSTYPE} in
 esac
 
 # vim:set ft=zsh:
-
-# set rbenv for ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
-
 ########################################
 # PECO
 ########################################
