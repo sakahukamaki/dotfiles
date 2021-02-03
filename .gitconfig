@@ -1,0 +1,63 @@
+[color]
+        ui = auto
+        status = auto
+        diff = auto
+        branch = auto
+        interactive = auto
+        grep = auto
+
+[core]
+        autoCRLF = false
+        pager = diff-highlight | less
+        filemode = false
+        excludesfile = /home/vagrant/.gitignore
+[alias]
+        st = status
+        co = checkout
+# branch関連
+        br = branch
+        bm = branch --merged     # merge済みのbranchを表示
+        bn = branch --no-merged  # mergeしてないbranchを表示
+        ls = status
+        oneline = log --pretty=oneline
+# diff関連
+        ds = diff --staged         # 同上(1.6.1移行)
+        git = !git
+        alias = config --list
+        d = diff
+        list = stash list
+        pop = stash pop
+        l = log -10 --oneline --decorate
+        cb = checkout -b
+        m = checkout master
+        coa = commit --amend
+        log = log --oneline -10
+        po = push origin HEAD
+        pof = push origin +HEAD
+        fixup = commit --fixup
+        fu = remote update
+        re = rebase origin/master
+        cont = rebase --continue
+        cd = "checkout "
+        bi = !bundle install
+        bundle = !bundle
+        ref = reflog -15
+        bals = reset --hard HEAD
+        dd = diff origin/master
+        pof = push origin HEAD -f
+        rollback = reset --soft HEAD~
+        rubocop = !bundle exec rubocop
+        save = commit -m 'save' -n
+
+
+[merge]
+        ff = false
+[pull]
+        ff = only
+
+[pager]
+        log = diff-highlight | less
+        show = diff-highlight | less
+        diff = diff-highlight | less
+[interactive]
+        diffFilter = diff-highlight
